@@ -1,0 +1,31 @@
+/* Styles principaux */
+.news-item:hover .news-overlay {
+  opacity: 1;
+}
+.chart-container {
+  height: 300px;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.mobile-menu.open {
+  max-height: 500px;
+}
+.dark-mode {
+  background-color: #1a202c;
+  color: #f7fafc;
+}
+.dark-mode .bg-white {
+  background-color: #2d3748;
+}
+.dark-mode .text-gray-800 {
+  color: #f7fafc;
+}
+.dark-mode .bg-gray-100 {
+  background-color: #4a5568;
+}

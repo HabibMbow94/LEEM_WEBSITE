@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEEM - Veille Technologique en IA Pharmaceutique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importer la feuille de style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body class="font-body bg-light">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <a href="#" class="flex items-center">
+              <div class="bg-primary text-white p-2 rounded-lg mr-3">
+                <i class="fas fa-brain text-2xl"></i>
+              </div>
+              <span class="font-heading text-2xl font-bold text-primary"
+                >LEEM</span
+              >
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <nav>
+              <ul class="flex space-x-8">
+                <li>
+                  <a
+                    href="#home"
+                    class="text-gray-800 hover:text-primary font-medium"
+                    >Accueil</a
+                  >
+                </li>
+                <li class="dropdown relative">
+                  <a
+                    href="#categories"
+                    class="text-gray-800 hover:text-primary font-medium flex items-center"
+                  >
+                    Catégories
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#analyses"
+                    class="text-gray-800 hover:text-primary font-medium"
+                    >Analyses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#ressources"
+                    class="text-gray-800 hover:text-primary font-medium"
+                    >Ressources</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#apropos"
+                    class="text-gray-800 hover:text-primary font-medium"
+                    >À propos</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Rechercher..."
+                class="border border-gray-300 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent w-64"
+              />
+              <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+            </div>
+            <button
+              id="darkModeToggle"
+              class="text-gray-600 hover:text-primary"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobileMenuButton"
+              class="text-gray-800 focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu md:hidden">
+          <nav class="px-2 pt-2 pb-4">
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="block px-3 py-2 rounded-md text-gray-800 hover:bg-gray-100"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#categories"
+                  class="block px-3 py-2 rounded-md text-gray-800 hover:bg-gray-100 flex justify-between items-center"
+                >
+                  Catégories
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#analyses"
+                  class="block px-3 py-2 rounded-md text-gray-800 hover:bg-gray-100"
+                  >Analyses</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#ressources"
+                  class="block px-3 py-2 rounded-md text-gray-800 hover:bg-gray-100"
+                  >Ressources</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#apropos"
+                  class="block px-3 py-2 rounded-md text-gray-800 hover:bg-gray-100"
+                  >À propos</a
+                >
+              </li>
+            </ul>
+            <div class="mt-4 relative">
+              <input
+                type="text"
+                placeholder="Rechercher..."
+                class="border border-gray-300 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent w-full"
+              />
+              <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+            </div>
+            <button
+              id="mobileDarkModeToggle"
+              class="mt-4 text-gray-600 hover:text-primary"
+            >
+              <i class="fas fa-moon"></i> Mode sombre
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="bg-gradient-to-r from-primary to-blue-600 text-white py-20"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1
+              class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+            >
+              L'intelligence artificielle au service de l'innovation
+              pharmaceutique
+            </h1>
+            <p class="text-xl mb-8">
+              Découvrez les dernières avancées en IA appliquée à la recherche et
+              au développement pharmaceutique.
+            </p>
+            <button
+              class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
+            >
+              S'inscrire à la newsletter
+            </button>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="IA en pharmaceutique"
+              class="rounded-xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News Carousel -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="font-heading text-3xl font-bold text-center mb-12">
+          Dernières actualités
+        </h2>
+
+        <div class="relative">
+          <div class="carousel-container overflow-hidden">
+            <div
+              class="carousel-track flex transition-transform duration-300"
+              id="carouselTrack"
+            >
+              <!-- Carousel items will be added by JavaScript -->
+            </div>
+          </div>
+
+          <button
+            class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-3 z-10 -ml-4 hover:bg-gray-100"
+          >
+            <i class="fas fa-chevron-left text-primary"></i>
+          </button>
+          <button
+            class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-3 z-10 -mr-4 hover:bg-gray-100"
+          >
+            <i class="fas fa-chevron-right text-primary"></i>
+          </button>
+        </div>
+
+        <div class="flex justify-center mt-6 space-x-2" id="carouselIndicators">
+          <!-- Indicators will be added by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Main Content Area -->
+        <div class="lg:w-full">
+          <!-- Trends Section -->
+          <section class="mb-16">
+            <h2 class="font-heading text-3xl font-bold mb-8">
+              Tendances du moment
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="font-heading text-xl font-semibold mb-4">
+                  Mentions par technologie
+                </h3>
+                <div class="chart-container">
+                  <canvas id="techMentionsChart"></canvas>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="font-heading text-xl font-semibold mb-4">
+                  Adoption par secteur
+                </h3>
+                <div class="chart-container">
+                  <canvas id="adoptionChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="font-heading text-xl font-semibold mb-4">
+                Évolution des publications
+              </h3>
+              <div class="chart-container">
+                <canvas id="publicationsChart"></canvas>
+              </div>
+            </div>
+          </section>
+
+          <!-- Categories Section -->
+          <section
+            id="categories"
+            class="py-16 bg-gray-50 dark-mode:bg-gray-900"
+          >
+            <div class="container mx-auto px-4">
+              <h2 class="text-3xl font-bold mb-10 text-center">
+                Catégories IA en pharmaceutique
+              </h2>
+
+              <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                  <button
+                    type="button"
+                    class="category-filter px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-300 bg-white dark-mode:bg-gray-700 hover:bg-gray-100 dark-mode:hover:bg-gray-600"
+                    data-category="all"
+                  >
+                    Toutes
+                  </button>
+                  <button
+                    type="button"
+                    class="category-filter px-4 py-2 text-sm font-medium border-t border-b border-gray-300 bg-white dark-mode:bg-gray-700 hover:bg-gray-100 dark-mode:hover:bg-gray-600"
+                    data-category="rnd"
+                  >
+                    R&D
+                  </button>
+                  <button
+                    type="button"
+                    class="category-filter px-4 py-2 text-sm font-medium border border-gray-300 bg-white dark-mode:bg-gray-700 hover:bg-gray-100 dark-mode:hover:bg-gray-600"
+                    data-category="production"
+                  >
+                    Production
+                  </button>
+                  <button
+                    type="button"
+                    class="category-filter px-4 py-2 text-sm font-medium rounded-r-lg border border-gray-300 bg-white dark-mode:bg-gray-700 hover:bg-gray-100 dark-mode:hover:bg-gray-600"
+                    data-category="regulation"
+                  >
+                    Régulation
+                  </button>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Category 1 -->
+                <div
+                  class="category-card bg-white dark-mode:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 card-hover"
+                  data-category="rnd"
+                >
+                  <div class="flex items-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-blue-100 dark-mode:bg-blue-900 rounded-full flex items-center justify-center mr-4"
+                    >
+                      <i
+                        class="fas fa-atom text-blue-600 dark-mode:text-blue-400 text-xl"
+                      ></i>
+                    </div>
+                    <h3 class="text-xl font-bold">IA Générative</h3>
+                  </div>
+                  <p class="text-gray-600 dark-mode:text-gray-300 mb-4">
+                    Conception de nouvelles molécules thérapeutiques à l'aide de
+                    modèles génératifs comme GAN et transformers.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-blue-100 dark-mode:bg-blue-900 text-blue-800 dark-mode:text-blue-200 text-xs px-2 py-1 rounded"
+                      >Drug Discovery</span
+                    >
+                    <span
+                      class="bg-blue-100 dark-mode:bg-blue-900 text-blue-800 dark-mode:text-blue-200 text-xs px-2 py-1 rounded"
+                      >GAN</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div
+                  class="category-card bg-white dark-mode:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 card-hover"
+                  data-category="rnd"
+                >
+                  <div class="flex items-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-purple-100 dark-mode:bg-purple-900 rounded-full flex items-center justify-center mr-4"
+                    >
+                      <i
+                        class="fas fa-brain text-purple-600 dark-mode:text-purple-400 text-xl"
+                      ></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Machine Learning</h3>
+                  </div>
+                  <p class="text-gray-600 dark-mode:text-gray-300 mb-4">
+                    Optimisation des essais précliniques et prédiction des
+                    propriétés pharmacocinétiques des candidats-médicaments.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-purple-100 dark-mode:bg-purple-900 text-purple-800 dark-mode:text-purple-200 text-xs px-2 py-1 rounded"
+                      >Predictive Models</span
+                    >
+                    <span
+                      class="bg-purple-100 dark-mode:bg-purple-900 text-purple-800 dark-mode:text-purple-200 text-xs px-2 py-1 rounded"
+                      >Random Forest</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div
+                  class="category-card bg-white dark-mode:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 card-hover"
+                  data-category="production"
+                >
+                  <div class="flex items-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-green-100 dark-mode:bg-green-900 rounded-full flex items-center justify-center mr-4"
+                    >
+                      <i
+                        class="fas fa-robot text-green-600 dark-mode:text-green-400 text-xl"
+                      ></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Robotique Pharma</h3>
+                  </div>
+                  <p class="text-gray-600 dark-mode:text-gray-300 mb-4">
+                    Automatisation des processus de production avec des robots
+                    pilotés par IA pour une précision maximale.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-green-100 dark-mode:bg-green-900 text-green-800 dark-mode:text-green-200 text-xs px-2 py-1 rounded"
+                      >Automation</span
+                    >
+                    <span
+                      class="bg-green-100 dark-mode:bg-green-900 text-green-800 dark-mode:text-green-200 text-xs px-2 py-1 rounded"
+                      >Computer Vision</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div
+                  class="category-card bg-white dark-mode:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 card-hover"
+                  data-category="rnd"
+                >
+                  <div class="flex items-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-yellow-100 dark-mode:bg-yellow-900 rounded-full flex items-center justify-center mr-4"
+                    >
+                      <i
+                        class="fas fa-dna text-yellow-600 dark-mode:text-yellow-400 text-xl"
+                      ></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Biologie Computationnelle</h3>
+                  </div>
+                  <p class="text-gray-600 dark-mode:text-gray-300 mb-4">
+                    Analyse des données omiques et modélisation des voies
+                    biologiques pour des thérapies ciblées.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-yellow-100 dark-mode:bg-yellow-900 text-yellow-800 dark-mode:text-yellow-200 text-xs px-2 py-1 rounded"
+                      >Omics Data</span
+                    >
+                    <span
+                      class="bg-yellow-100 dark-mode:bg-yellow-900 text-yellow-800 dark-mode:text-yellow-200 text-xs px-2 py-1 rounded"
+                      >Pathway Analysis</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Category 5 -->
+                <div
+                  class="category-card bg-white dark-mode:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 card-hover"
+                  data-category="production"
+                >
+                  <div class="flex items-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-red-100 dark-mode:bg-red-900 rounded-full flex items-center justify-center mr-4"
+                    >
+                      <i
+                        class="fas fa-tablets text-red-600 dark-mode:text-red-400 text-xl"
+                      ></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Contrôle Qualité IA</h3>
+                  </div>
+                  <p class="text-gray-600 dark-mode:text-gray-300 mb-4">
+                    Détection des défauts de production et assurance qualité
+                    automatisée par vision par ordinateur.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-red-100 dark-mode:bg-red-900 text-red-800 dark-mode:text-red-200 text-xs px-2 py-1 rounded"
+                      >Quality Control</span
+                    >
+                    <span
+                      class="bg-red-100 dark-mode:bg-red-900 text-red-800 dark-mode:text-red-200 text-xs px-2 py-1 rounded"
+                      >CNN</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Category 6 -->
+                <div
+                  class="category-card bg-white dark-mode:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 card-hover"
+                  data-category="regulation"
+                >
+                  <div class="flex items-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-indigo-100 dark-mode:bg-indigo-900 rounded-full flex items-center justify-center mr-4"
+                    >
+                      <i
+                        class="fas fa-balance-scale text-indigo-600 dark-mode:text-indigo-400 text-xl"
+                      ></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Régulation & Éthique</h3>
+                  </div>
+                  <p class="text-gray-600 dark-mode:text-gray-300 mb-4">
+                    Cadres réglementaires pour l'IA en santé et questions
+                    éthiques autour de l'utilisation des données patients.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-indigo-100 dark-mode:bg-indigo-900 text-indigo-800 dark-mode:text-indigo-200 text-xs px-2 py-1 rounded"
+                      >GDPR</span
+                    >
+                    <span
+                      class="bg-indigo-100 dark-mode:bg-indigo-900 text-indigo-800 dark-mode:text-indigo-200 text-xs px-2 py-1 rounded"
+                      >Ethics</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Fresh News Widget -->
+          <section class="mb-16">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="font-heading text-3xl font-bold">
+                Actualités fraîches
+              </h2>
+              <span
+                class="bg-accent text-white text-sm font-bold px-3 py-1 rounded-full"
+                >24h</span
+              >
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="News image"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div
+                    class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded"
+                  >
+                    Nouveau
+                  </div>
+                </div>
+                <div class="p-6">
+                  <div class="flex items-center text-sm text-gray-500 mb-2">
+                    <span>Il y a 3 heures</span>
+                    <span class="mx-2">•</span>
+                    <span>IA Générative</span>
+                  </div>
+                  <h3 class="font-heading text-xl font-bold mb-3">
+                    Nouveau modèle d'IA pour la découverte de médicaments
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    Une équipe de chercheurs a développé un modèle génératif
+                    capable de proposer des structures moléculaires prometteuses
+                    en un temps record.
+                  </p>
+                  <a href="#" class="text-primary font-semibold hover:underline"
+                    >Lire la suite</a
+                  >
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                    alt="News image"
+                    class="w-full h-48 object-cover"
+                  />
+                  <div
+                    class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded"
+                  >
+                    Nouveau
+                  </div>
+                </div>
+                <div class="p-6">
+                  <div class="flex items-center text-sm text-gray-500 mb-2">
+                    <span>Il y a 5 heures</span>
+                    <span class="mx-2">•</span>
+                    <span>Régulation</span>
+                  </div>
+                  <h3 class="font-heading text-xl font-bold mb-3">
+                    L'Europe dévoile son cadre réglementaire pour l'IA en santé
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    La Commission européenne a présenté de nouvelles lignes
+                    directrices pour encadrer l'utilisation de l'IA dans le
+                    secteur pharmaceutique et médical.
+                  </p>
+                  <a href="#" class="text-primary font-semibold hover:underline"
+                    >Lire la suite</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Expert Analysis Preview -->
+          <section id="analyses" class="mb-16">
+            <h2 class="font-heading text-3xl font-bold mb-8">
+              Analyses d'experts
+            </h2>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Expert analysis"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-8">
+                <div class="flex items-center text-sm text-gray-500 mb-4">
+                  <span>Publié aujourd'hui</span>
+                  <span class="mx-2">•</span>
+                  <span>Par Dr. Sophie Martin</span>
+                </div>
+                <h3 class="font-heading text-2xl font-bold mb-4">
+                  L'impact de l'IA sur les essais cliniques: révolution ou
+                  évolution?
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Dans cette analyse approfondie, le Dr. Martin examine comment
+                  les technologies d'intelligence artificielle transforment la
+                  conduite des essais cliniques, depuis le recrutement des
+                  patients jusqu'à l'analyse des résultats. Elle distingue les
+                  avancées véritablement révolutionnaires des améliorations
+                  incrémentales et évalue l'impact réel sur les délais et les
+                  coûts de développement.
+                </p>
+                <div class="flex justify-between items-center">
+                  <a href="#" class="text-primary font-semibold hover:underline"
+                    >Lire l'analyse complète</a
+                  >
+                  <div class="flex space-x-2">
+                    <button class="text-gray-500 hover:text-blue-500">
+                      <i class="far fa-comment"></i>
+                      <span class="ml-1">12</span>
+                    </button>
+                    <button class="text-gray-500 hover:text-green-500">
+                      <i class="far fa-bookmark"></i>
+                    </button>
+                    <button class="text-gray-500 hover:text-red-500">
+                      <i class="fas fa-share-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Resources Section -->
+          <section id="ressources" class="py-12 bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-4">
+              <div class="text-center mb-12">
+                <h2
+                  class="font-heading text-3xl font-bold mb-4 dark:text-white"
+                >
+                  Ressources
+                </h2>
+                <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+                  Accédez à notre bibliothèque de ressources pour approfondir
+                  vos connaissances en IA pharmaceutique.
+                </p>
+              </div>
+
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Resource 1 -->
+                <div
+                  class="bg-light dark:bg-gray-700 rounded-xl p-6 hover:shadow-md transition"
+                >
+                  <div
+                    class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-file-pdf text-xl"></i>
+                  </div>
+                  <h3
+                    class="font-heading text-xl font-bold mb-3 dark:text-white"
+                  >
+                    Whitepapers
+                  </h3>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Téléchargez nos rapports techniques sur les applications de
+                    l'IA en pharma.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-primary font-semibold hover:text-blue-700 dark:hover:text-blue-400 flex items-center"
+                  >
+                    Explorer <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+
+                <!-- Resource 2 -->
+                <div
+                  class="bg-light dark:bg-gray-700 rounded-xl p-6 hover:shadow-md transition"
+                >
+                  <div
+                    class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-book text-xl"></i>
+                  </div>
+                  <h3
+                    class="font-heading text-xl font-bold mb-3 dark:text-white"
+                  >
+                    Glossaire
+                  </h3>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Définitions des termes techniques d'IA spécifiques au
+                    secteur pharmaceutique.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-primary font-semibold hover:text-blue-700 dark:hover:text-blue-400 flex items-center"
+                  >
+                    Consulter <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+
+                <!-- Resource 3 -->
+                <div
+                  class="bg-light dark:bg-gray-700 rounded-xl p-6 hover:shadow-md transition"
+                >
+                  <div
+                    class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-calendar-alt text-xl"></i>
+                  </div>
+                  <h3
+                    class="font-heading text-xl font-bold mb-3 dark:text-white"
+                  >
+                    Événements
+                  </h3>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Calendrier des conférences, webinaires et ateliers à venir
+                    dans le domaine.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-primary font-semibold hover:text-blue-700 dark:hover:text-blue-400 flex items-center"
+                  >
+                    Voir l'agenda <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+
+                <!-- Resource 4 -->
+                <div
+                  class="bg-light dark:bg-gray-700 rounded-xl p-6 hover:shadow-md transition"
+                >
+                  <div
+                    class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-play-circle text-xl"></i>
+                  </div>
+                  <h3
+                    class="font-heading text-xl font-bold mb-3 dark:text-white"
+                  >
+                    Vidéothèque
+                  </h3>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Regardez les replays de nos webinaires et présentations
+                    techniques.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-primary font-semibold hover:text-blue-700 dark:hover:text-blue-400 flex items-center"
+                  >
+                    Accéder <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Video Gallery -->
+              <div class="mt-12">
+                <h3
+                  class="font-heading text-2xl font-bold mb-6 dark:text-white"
+                >
+                  Vidéos récentes
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div
+                    class="bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden aspect-video"
+                  >
+                    <div class="w-full h-full flex items-center justify-center">
+                      <i class="fas fa-play-circle text-5xl text-primary"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden aspect-video"
+                  >
+                    <div class="w-full h-full flex items-center justify-center">
+                      <i class="fas fa-play-circle text-5xl text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center mt-6">
+                  <a
+                    href="#"
+                    class="inline-flex items-center px-6 py-3 border border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-dark"
+                  >
+                    Voir plus de vidéos <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-12 bg-primary text-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold font-heading mb-8 text-center">
+          À propos de LEEM
+        </h2>
+
+        <div class="max-w-4xl mx-auto text-center mb-12">
+          <p class="text-xl mb-6">
+            Notre mission est d'accompagner l'industrie pharmaceutique dans sa
+            transformation numérique en fournissant une veille technologique de
+            qualité sur les applications de l'intelligence artificielle.
+          </p>
+          <p>
+            Fondé en 2020, LEEM rassemble une équipe pluridisciplinaire
+            d'experts en IA, en sciences pharmaceutiques et en analyse de
+            données pour décrypter les innovations les plus prometteuses.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-bold font-heading mb-8 text-center">
+          Notre équipe
+        </h3>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+            <img
+              src="https://randomuser.me/api/portraits/women/65.jpg"
+              alt="Directrice LEEM"
+              class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-center">
+              Dr. Isabelle Leroy
+            </h4>
+            <p class="text-center opacity-90">Directrice générale</p>
+            <p class="text-sm mt-3 text-center opacity-80">
+              15 ans d'expérience en stratégie digitale pharmaceutique
+            </p>
+          </div>
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+            <img
+              src="https://randomuser.me/api/portraits/men/42.jpg"
+              alt="Responsable scientifique"
+              class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-center">Prof. Marc Dubois</h4>
+            <p class="text-center opacity-90">Responsable scientifique</p>
+            <p class="text-sm mt-3 text-center opacity-80">
+              Expert en machine learning appliqué à la biologie
+            </p>
+          </div>
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+            <img
+              src="https://randomuser.me/api/portraits/women/33.jpg"
+              alt="Responsable veille"
+              class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-center">Sophie Lambert</h4>
+            <p class="text-center opacity-90">Responsable veille</p>
+            <p class="text-sm mt-3 text-center opacity-80">
+              Spécialiste des tendances IA en santé
+            </p>
+          </div>
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+            <img
+              src="https://randomuser.me/api/portraits/men/75.jpg"
+              alt="Responsable données"
+              class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h4 class="text-xl font-semibold text-center">Thomas Moreau</h4>
+            <p class="text-center opacity-90">Responsable données</p>
+            <p class="text-sm mt-3 text-center opacity-80">
+              Ingénieur en analyse de données médicales
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div
+          class="max-w-6xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden dark:bg-gray-700"
+        >
+          <div class="md:flex">
+            <div class="md:w-1/2 bg-primary p-8 text-white dark:bg-gray-900">
+              <h3 class="text-2xl font-bold font-heading mb-4">
+                Contactez-nous
+              </h3>
+              <p class="mb-6">
+                Vous avez des questions sur nos services ou souhaitez collaborer
+                avec notre équipe ?
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <i class="fas fa-envelope mt-1 mr-4"></i>
+                  <div>
+                    <p class="font-medium">Email</p>
+                    <p class="text-sm opacity-80">contact@leem-iapharma.fr</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <i class="fas fa-phone-alt mt-1 mr-4"></i>
+                  <div>
+                    <p class="font-medium">Téléphone</p>
+                    <p class="text-sm opacity-80">+33 1 23 45 67 89</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <i class="fas fa-map-marker-alt mt-1 mr-4"></i>
+                  <div>
+                    <p class="font-medium">Adresse</p>
+                    <p class="text-sm opacity-80">
+                      15 Rue de l'Innovation, 75015 Paris
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="font-medium mb-3">Suivez-nous</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:w-1/2 p-8 dark:text-white">
+              <h3 class="text-2xl font-bold font-heading mb-6">
+                Envoyez-nous un message
+              </h3>
+              <form>
+                <div class="mb-4">
+                  <label for="name" class="block text-sm font-medium mb-1"
+                    >Nom complet</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-600 dark:border-gray-500"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="block text-sm font-medium mb-1"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-600 dark:border-gray-500"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="subject" class="block text-sm font-medium mb-1"
+                    >Sujet</label
+                  >
+                  <select
+                    id="subject"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-600 dark:border-gray-500"
+                  >
+                    <option>Sélectionnez un sujet</option>
+                    <option>Demande d'information</option>
+                    <option>Proposition de collaboration</option>
+                    <option>Abonnement</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+                <div class="mb-6">
+                  <label for="message" class="block text-sm font-medium mb-1"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-600 dark:border-gray-500"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition dark:bg-secondary dark:hover:bg-orange-600"
+                >
+                  Envoyer le message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <i class="fas fa-brain text-secondary text-2xl"></i>
+              <span class="text-2xl font-bold font-heading">LEEM</span>
+            </div>
+            <p class="text-gray-400">
+              Plateforme de veille technologique sur les applications de
+              l'intelligence artificielle dans l'industrie pharmaceutique.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#accueil"
+                  class="text-gray-400 hover:text-secondary transition"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#categories"
+                  class="text-gray-400 hover:text-secondary transition"
+                  >Catégories IA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#analyses"
+                  class="text-gray-400 hover:text-secondary transition"
+                  >Analyses d'experts</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#ressources"
+                  class="text-gray-400 hover:text-secondary transition"
+                  >Ressources</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#apropos"
+                  class="text-gray-400 hover:text-secondary transition"
+                  >À propos</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Légal</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition"
+                  >Mentions légales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition"
+                  >Politique de confidentialité</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition"
+                  >Conditions générales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition"
+                  >Cookies</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+            <p class="text-gray-400 mb-4">
+              Abonnez-vous pour recevoir nos dernières analyses.
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Votre email"
+                class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full"
+              />
+              <button
+                class="bg-secondary hover:bg-orange-600 px-4 py-2 rounded-r-lg transition"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            © 2023 LEEM. Tous droits réservés.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-secondary transition"
+              ><i class="fab fa-linkedin-in text-xl"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-secondary transition"
+              ><i class="fab fa-twitter text-xl"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-secondary transition"
+              ><i class="fab fa-youtube text-xl"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-secondary transition"
+              ><i class="fab fa-github text-xl"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- JS principal -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

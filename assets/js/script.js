@@ -6,6 +6,7 @@ tailwind.config = {
     extend: {
       colors: {
         primary: "#0072CE",
+        secondary: '#FF6B35',
         accent: "#FF6B35",
         light: "#F5F7FA",
       },
